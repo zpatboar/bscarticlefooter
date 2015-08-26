@@ -15,7 +15,8 @@ class plgContentBSCArticleFooter extends JPlugin
 	{
                 $option = JRequest::getCmd('option');
                 $view = JRequest::getCmd('view');
-                if ($option == 'com_content' && ( ( $context == 'com_content.article' && $view = 'article' && $this->isCategoryRight() ) OR ($this->params->get('frontpage') == 'yes' && $context == 'com_content.featured' && $view = 'featured') ) ){//without $context shows for mod_custom, doesn't hurt to check.
+				
+                if ($option == 'com_content' && ( ( $context == 'com_content.article' && $view = 'article' && $this->isCategoryRight() ) OR ($this->params->get('frontpage') == 'yes' && $context == 'com_content.featured' && $view = 'featured') OR ($this->params->get('categoryblog') == 'yes' && $context == 'com_content.category' && $view = 'blog') ) ){//without $context shows for mod_custom, doesn't hurt to check.
         		// Get the footer
         		$footer = $this->params->get('text');
         		$footer = trim($footer);
