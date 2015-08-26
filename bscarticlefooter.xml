@@ -3,7 +3,7 @@
 	<name>PLG_CONTENT_BSC_ARTICLEFOOTER_NAME</name>
 	<author>Boarman Service Company, LLC</author>
 	<creationDate>August 2015</creationDate>
-	<copyright>Copyright (C) 2012-2013 Boarman Service Company, LLC.</copyright>
+	<copyright>Copyright (C) 2012-2015 Boarman Service Company, LLC.</copyright>
 	<license>GNU General Public License Version 2, see LICENSE.txt inside the package.</license>
 	<authorEmail>zackary.boarman@boarmanservicecompany.com</authorEmail>
 	<authorUrl>www.boarmanservicecompany.com</authorUrl>
@@ -17,11 +17,15 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
+				<field name="text" type="editor" label="PLG_CONTENT_BSC_ARTICLEFOOTER_CONTENT_LABEL" filter="raw"/>
 				<field name="frontpage" type="list" default="no" label="PLG_CONTENT_BSC_ARTICLEFOOTER_FRONTPAGE_LABEL" filter="">
 					<option	value="yes">JYES</option>
 					<option	value="no">JNO</option>
 				</field>
-				<field name="text" type="editor" label="PLG_CONTENT_BSC_ARTICLEFOOTER_CONTENT_LABEL" filter="raw"/>
+				<field name="categoryblog" type="list" default="no" label="PLG_CONTENT_BSC_ARTICLEFOOTER_CATEGORYBLOG_LABEL" filter="">
+					<option	value="yes">JYES</option>
+					<option	value="no">JNO</option>
+				</field>
 				<field name="category" type="category" extension="com_content" label="PLG_CONTENT_BSC_ARTICLEFOOTER_CATEGORIES_LABEL" description="PLG_CONTENT_BSC_ARTICLEFOOTER_CATEGORIES_DESC" multiple="true"/>
 			</fieldset>
 		</fields>
